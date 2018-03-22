@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+
+import './App.css';
 
 import Home from './Home';
 import About from './About';
@@ -15,6 +17,8 @@ const App = () => {
 
     const supportsHistory = 'pushState' in window.history;
 
+    const checkActive = (match, location) => false;
+
     return (
         <BrowserRouter
             basename="/calendar/"
@@ -24,20 +28,36 @@ const App = () => {
             <div>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <NavLink 
+                            to="/"
+                            activeClassName="navactive"
+                            isActive={checkActive}
+                        >
+                            Home
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/about">About</Link>
+                        <NavLink 
+                            to="/about"
+                            activeClassName="navactive"
+                        >
+                            About
+                        </NavLink>
                     </li>
                     <li>
-                        <Link to="/topics">Topics</Link>
+                        <NavLink 
+                            to="/topics"
+                            activeClassName="navactive"
+                        >
+                            Topics
+                        </NavLink>
                     </li>
                 </ul>
 
                 <hr />
 
                 <Route exact path="/" component={Home} />
-                <Route path="/about" component={About} />
+                <Route exaxt path="/about" component={About} />
                 <Route path="/topics" component={Topics} />
             </div>
         </BrowserRouter>

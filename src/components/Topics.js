@@ -29,6 +29,7 @@ const Topics = ({ match }) => {
                     <NavLink 
                         to={`${match.url}/props-v-state`}
                         activeCLassName="active"
+                        activeStyle={{ color: 'red'}}
                     >
                         Props vs. State
                     </NavLink>

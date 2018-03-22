@@ -11,8 +11,8 @@ import Error404 from '../Error404';
 export default () => (
     <Switch>
         <Route exact path="/" component={Home} />
-        <Route exaxt path="/about" component={About} />
-        <Route exaxt path="/topics" component={Topics} />
+        <Route exact path="/about" component={About} />
+        <Route path="/topics" component={Topics} />
         <Route path="/category" component={Category} />
         <Route path="/products" component={Products} />
         <Route component={Error404} />

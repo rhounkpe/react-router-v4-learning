@@ -1,20 +1,18 @@
 import React from 'react';
 import Routes from './routes';
-import { NavLink } from 'react-router-dom';
 
 import './App.css';
 
+import Header from './Header';
+
 
 const App = () => {
-    const getConfirmation = (message, callback) => {
-        const allowTransition = window.confirm(message);
-        callback(allowTransition);
-    }
-
-    const supportsHistory = 'pushState' in window.history;
 
     return (
-        <Routes />
+        <div>
+            <Header />
+            <Routes />
+        </div>
     );
 };
 

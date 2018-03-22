@@ -1,20 +1,20 @@
 import React from 'react';
-import { BrowserRouter, Route, NavLink } from 'react-router-dom';
+import { Route, Switch } from 'react-router-dom';
 
 import Home from '../Home';
 import About from '../About';
 import Topics from '../Topics';
-import NavMenu from '../NavMenu';
+import Category from '../Categories/Category';
+import Products from '../Products/Products';
 
 export default () => (
-    <BrowserRouter
-        basename="/calendar/"
-    >
-        <div>
-            <Route component={NavMenu} />
+    <div>
+        <Switch>
             <Route exact path="/" component={Home} />
             <Route exaxt path="/about" component={About} />
-            <Route path="/topics" component={Topics} />
-        </div>  
-    </BrowserRouter>  
+            <Route exaxt path="/topics" component={Topics} />
+            <Route path="/category" component={Category} />
+            <Route path="/products" component={Products} />
+        </Switch> 
+    </div> 
 );

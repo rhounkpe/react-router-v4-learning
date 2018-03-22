@@ -1,8 +1,8 @@
 import React from 'react';
-import {NavLink } from 'react-router-dom';
+import {NavLink, Link } from 'react-router-dom';
 
 
-const NavMenu = () => {
+const Header = () => {
     const checkActive = (match, location) => false;
     
     return (
@@ -33,6 +33,8 @@ const NavMenu = () => {
                         Topics
                     </NavLink>
                 </li>
+                <li><Link to="/category">Category</Link></li>
+                <li><Link to="/products">Products</Link></li>
             </ul>
 
             <hr />  
@@ -40,4 +42,4 @@ const NavMenu = () => {
     );
 };
 
-export default NavMenu;
+export default Header;

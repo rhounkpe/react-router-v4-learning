@@ -2,7 +2,7 @@ import React from 'react';
 import Error404 from '../Error404';
 
 const Product = ({ match, data}) => {
-    var product = data.find(p => p.id == match.params.productId);
+    var product = data.find(p => p.id === match.params.productId);
     var productData;
 
     if(product) {

@@ -1,7 +1,7 @@
 export const AllProducts = [
     {
       id: 1,
-      name: 'NIKE Liteforce Blue Sneakers',
+      name: 'NIKE! Liteforce: Blue? @Sneakers',
       description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin molestie.',
       status: 'Available'
     

@@ -2,12 +2,15 @@ import React from 'react';
 import { Link, Route } from 'react-router-dom';
 import { AllProducts } from '../../database/Products';
 import Product from './Product';
+const slugify = require('slugify');
 
 const Products = ({ match }) => {
-    console.log(AllProducts);
-
     const linkList = AllProducts.map(product => <li key={product.id}>
-            <Link to={`${match.url}/${product.id}`}>
+            <Link to={`${match.url}/${slugify(product.name, {
+                replacement: '-', // replace spaces with replacement
+                remove: /[$*_+~.()'"!\-:@?]/g,    // regex to remove characters
+                lower: true      // result in lower case
+            })}`}>
                 {product.name}
             </Link>
         </li>
@@ -22,7 +25,7 @@ const Products = ({ match }) => {
                 </ul>
             </div>
 
-            <Route path={`${match.url}/:productId`}
+            <Route path={`${match.url}/:slug`}
                 render={props => <Product data={AllProducts} {...props} />}
             />
 

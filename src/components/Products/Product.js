@@ -1,8 +1,15 @@
 import React from 'react';
 import Error404 from '../Error404';
+const slugify = require('slugify');
 
 const Product = ({ match, data}) => {
-    var product = data.find(p => p.id === match.params.productId);
+    var product = data.find(p => {
+        return slugify(p.name, {
+            replacement: '-', // replace spaces with replacement
+            remove: /[$*_+~.()'"!\-:@?]/g,    // regex to remove characters
+            lower: true      // result in lower case
+        }) === match.params.slug
+    });
     var productData;
 
     if(product) {

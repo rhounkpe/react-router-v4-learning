@@ -8,13 +8,11 @@ import Category from '../Categories/Category';
 import Products from '../Products/Products';
 
 export default () => (
-    <div>
-        <Switch>
-            <Route exact path="/" component={Home} />
-            <Route exaxt path="/about" component={About} />
-            <Route exaxt path="/topics" component={Topics} />
-            <Route path="/category" component={Category} />
-            <Route path="/products" component={Products} />
-        </Switch> 
-    </div> 
+    <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exaxt path="/about" component={About} />
+        <Route exaxt path="/topics" component={Topics} />
+        <Route path="/category" component={Category} />
+        <Route path="/products" component={Products} />
+    </Switch> 
 );

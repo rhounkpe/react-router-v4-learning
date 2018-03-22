@@ -1,4 +1,5 @@
 import React from 'react';
+import Error404 from '../Error404';
 
 const Product = ({ match, data}) => {
     var product = data.find(p => p.id == match.params.productId);
@@ -15,7 +16,7 @@ const Product = ({ match, data}) => {
         );
     }
     else {
-        productData = <h2>Sorry. Product doesn't exist</h2>
+        productData = <Error404 />
     }
 
     return (

@@ -1,0 +1,5 @@
+https://www.sitepoint.com/react-router-v4-complete-guide/
+https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Op%C3%A9rateurs/Syntaxe_d%C3%A9composition
+https://css-tricks.com/react-router-4/
+https://medium.com/@thejasonfile/basic-intro-to-react-router-v4-a08ae1ba5c42
+https://medium.com/@pshrmn/a-simple-react-router-v4-tutorial-7f23ff27adf
